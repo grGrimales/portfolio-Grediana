@@ -37,7 +37,7 @@ header {
   position: relative;
 }
 
-.nav-link {
+.nav-enlace-link {
   color: white;
   text-decoration: none;
 }
@@ -63,6 +63,11 @@ header {
   font-weight: bold;
   border-bottom: 1px solid #ffffff;
 }
+.active{
+  color:#f7a1d5;
+  font-weight: bold;
+}
+
 
 /* TOGGLE */
 .nav-toggle {

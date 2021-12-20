@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   const navToggle = () => {
@@ -14,20 +14,20 @@ export const Header = () => {
         <nav className="nav">
           <ul className="nav-menu">
             <li className="nav-menu-item">
-             <Link to="/"   className="nav-menu-link nav-link ">Home</Link>
+             <NavLink to="/"  className={({ isActive }) => (isActive ? "active nav-menu-link nav-enlace-link" : "nav-menu-link nav-enlace-link")}>Home</NavLink>
             </li>
 
             <li className="nav-menu-item">
-             <Link to="/portfolio"   className="nav-menu-link nav-link ">Portfolio</Link>
+             <NavLink to="/portfolio"   className="nav-menu-link nav-enlace-link">Portfolio</NavLink>
         
 
             </li>
             <li className="nav-menu-item">
-             <Link to="/herramientas"   className="nav-menu-link nav-link ">Herramientas</Link>
+             <NavLink to="/herramientas"   className="nav-menu-link nav-enlace-link">Herramientas</NavLink>
             </li>
 
             <li className="nav-menu-item">
-             <Link to="/contacto"   className="nav-menu-link nav-link ">Contacto</Link>
+             <NavLink to="/contacto"   className="nav-menu-link nav-enlace-link">Contacto</NavLink>
 
     
             </li>
