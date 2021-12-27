@@ -1,12 +1,17 @@
 import React from 'react'
-import logo from '../../images/black-jack.png';
+import logo from '../../images/responsive-2.png';
+import responsive3 from '../../images/responsive-3.png';
+import responsive4 from '../../images/responsive-4.png';
+
+
 
 
 export const Home = () => {
     return (
         <>
         <main>
-          <section className="cont-descripción">
+            <div className="contenedor-home">
+            <section className="cont-descripcion">
             <h1>
               ¡Buen día soy <span>Grediana Rojas!</span>
             </h1>
@@ -32,10 +37,10 @@ export const Home = () => {
                 <img src={logo} className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
-                <img src={logo} className="d-block w-100" alt="..." />
+                <img src={responsive3} className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
-                <img src={logo} className="d-block w-100" alt="..." />
+                <img src={responsive4} className="d-block w-100" alt="..." />
               </div>
             </div>
             <button
@@ -57,7 +62,11 @@ export const Home = () => {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
+            </div>
+      
         </main>
+
+     
       </>
     )
 }

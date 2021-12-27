@@ -8,7 +8,9 @@ function App() {
   return (
     <>
     <AppRouter>
-  
+  <div className="contenedor-app">
+
+  </div>
 
     </AppRouter>
 

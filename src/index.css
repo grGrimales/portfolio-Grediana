@@ -10,6 +10,23 @@ html {
   padding: 0;
 }
 
+/*Generales*/
+
+h1 {
+  font-weight: bold;
+  font-size: 1.87rem;
+}
+
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.contenedor-app{
+  max-width: 100%;
+}
+
 /*Header*/
 header {
   display: flex;
@@ -23,16 +40,7 @@ header {
   justify-items: end;
 }
 
-/* header img{
-      grid-column: 1/2;
-      width: 39%;
-      height: 100%;
-      max-height: 6.25rem;
-      justify-self: start;
-  } */
-
 .nav {
-  /* grid-column: 2/3; */
   max-width: 992px;
   position: relative;
 }
@@ -63,11 +71,10 @@ header {
   font-weight: bold;
   border-bottom: 1px solid #ffffff;
 }
-.active{
-  color:#f7a1d5;
+.active {
+  color: #f7a1d5;
   font-weight: bold;
 }
-
 
 /* TOGGLE */
 .nav-toggle {
@@ -83,30 +90,93 @@ header {
 
 /* Home */
 
-main{
-
+.contenedor-home {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.cont-descripción {
-  width: 50%;
-  height: 20rem;
-  margin: 8rem auto;
+.cont-descripcion {
+  width: 90%;
+  margin: 5rem auto;
   /* background-color: #ffc8dd; */
   box-shadow: 0 4px 8px 0 #ffc8dd;
 }
 
-.cont-descripción h1 {
+.cont-descripcion h1 {
   text-align: center;
   padding-top: 1.5rem;
 }
 
-.cont-descripción p {
+.cont-descripcion p {
   text-align: justify;
   padding: 1rem;
   line-height: 2rem;
 }
+
+/**Herramientas*/
+.titulo{
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  
+}
+
+.section-herramientas{
+  width: 100%;
+
+}
+.section-herramientas p{
+  text-align: center;
+
+}
+
+
+.contenedor-herramientas{
+  width: 85%;
+ display: grid;
+ grid-template-rows: repeat(3, 1fr);
+ grid-template-columns: repeat(2, 1fr);
+ align-items: center;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ margin: 0 auto;
+ margin-bottom: 2rem;
+
+}
+
+
+
+.herramienta{
+ /* background-color: #F7A1D5; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  /* width: 70px;
+  height: 70px; */
+
+}
+
+.herramienta img{
+  width: 70%;
+}
+
+
+/*Contacto*/
+
+.contenedor-contacto{
+  display: flex;
+
+  
+}
+
+.section-form{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 @media (max-width: 768px) {
   header {
     height: 3.75rem;
@@ -145,4 +215,27 @@ main{
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
+
+
+}
+@media (min-width: 576px) { 
+  .contenedor-herramientas{
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+   }
+
+ }
+
+@media (min-width: 768px) { 
+  .contenedor-herramientas{
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+   }
+   
+}
+@media (min-width: 992px) {
+  .cont-descripcion {
+    width: 50%;
+  } 
+  
 }
