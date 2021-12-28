@@ -4,25 +4,22 @@ import { Link, NavLink } from "react-router-dom";
 export const Contacto = () => {
   return (
     <>
-      <main className="main-contacto"> 
+      <main className="main-contacto">
         <div className="contenedor-contacto">
-  
           <section className="section-form">
             <h1 className="text-center">Contacto</h1>
             <div className="contenedor-parrafo">
-            <p>
-              ¿Escribir una línea para decir "buenos días", pedir mi currículum
-              o ver si podemos construir algo increíble juntos? ¡Me encantaría
-              saber de ti! Complete su información en el formulario a
-              continuación y espero tener noticias suyas.
-            </p>
+              <p>
+                ¿Escribir una línea para decir "buenos días", pedir mi
+                currículum o ver si podemos construir algo increíble juntos? ¡Me
+                encantaría saber de ti! Complete su información en el formulario
+                a continuación y espero tener noticias suyas.
+              </p>
             </div>
-            
-            
           </section>
 
           <section className="section-redes">
-          <form>
+            <form>
               <div className="contenedor-form">
                 <div>
                   <label htmlFor="nombre">Nombre</label>
@@ -69,25 +66,34 @@ export const Contacto = () => {
                 </button>
               </div>
             </form>
-            
+
             <div className="contenedor-redes">
-            <h2>Grediana Rojas Grimales</h2>
-            <p>Telefóno: <span>+51 935-462-416</span></p>
-             <div>
-             <a
-                href="https://www.linkedin.com/in/grediana-rojas/"
-                target="_blank"
-              >
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/grGrimales" target="_blank">
-                <i className="fab fa-github"></i>
-              </a>
-              <a href="https://github.com/grGrimales" target="_blank">
-                <i className="fab fa-whatsapp"></i>
-              </a>
-             </div>
-         
+              <h2>Grediana Rojas Grimales</h2>
+              <p>
+                Telefóno: <span>+51 935-462-416</span>
+              </p>
+              <div className="contenedor-enlaces">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/grediana-rojas/"
+                      target="_blank"
+                    >
+                      <i className="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/grGrimales" target="_blank">
+                      <i className="fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/grGrimales" target="_blank">
+                      <i className="fab fa-whatsapp"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         </div>
