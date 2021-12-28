@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 *,
 *:before,
@@ -8,6 +7,9 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 /*Generales*/
@@ -23,8 +25,14 @@ h3 {
   font-weight: 400;
 }
 
-.contenedor-app{
+.contenedor-app {
   max-width: 100%;
+}
+
+/*Utilidades*/
+
+.text-center {
+  text-align: center;
 }
 
 /*Header*/
@@ -115,67 +123,140 @@ header {
 }
 
 /**Herramientas*/
-.titulo{
+.titulo {
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 2rem;
-  
 }
 
-.section-herramientas{
+.section-herramientas {
   width: 100%;
-
 }
-.section-herramientas p{
+.section-herramientas p {
   text-align: center;
-
 }
 
-
-.contenedor-herramientas{
+.contenedor-herramientas {
   width: 85%;
- display: grid;
- grid-template-rows: repeat(3, 1fr);
- grid-template-columns: repeat(2, 1fr);
- align-items: center;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
- margin: 0 auto;
- margin-bottom: 2rem;
-
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
-
-
-.herramienta{
- /* background-color: #F7A1D5; */
+.herramienta {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1rem;
-  /* width: 70px;
-  height: 70px; */
-
 }
 
-.herramienta img{
+.herramienta img {
   width: 70%;
 }
 
-
 /*Contacto*/
 
-.contenedor-contacto{
-  display: flex;
 
-  
+.contenedor-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .section-form{
+  background-image: url(images/Cruzada.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 24%;
+}
+
+.section-form p {
+  text-align: justify;
+  padding: 0 2rem;
+  line-height: 3;
+  margin-bottom: 0;
+}
+
+
+.contenedor-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fef2d8;
+}
+
+
+label {
+  display: block;
+  font-weight: 700;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  color: #f266b5;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #f7a1d5;
+  border-right: 1px solid #f7a1d5;
+  outline: none;
+}
+
+.btn-regular {
+  width: 50%;
+  background-color: #f7a1d5;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+.section-redes {
   display: flex;
   flex-direction: column;
 }
 
+.contenedor-redes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: nowrap;
+}
 
+.contenedor-redes h2,
+.contenedor-redes p {
+  color: #f15bb5;
+  font-weight: bold;
+}
+
+.contenedor-redes span {
+  color: black;
+}
+
+
+
+.contenedor-redes a{
+  color: #4071EC;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.contenedor-redes a:hover{
+  transform: scale(1.2, 1.2);
+}
 
 @media (max-width: 768px) {
   header {
@@ -197,13 +278,6 @@ header {
     transition: left 0.3s;
   }
 
-  /* header img{
-      width: 100%;
-      height: 100%;
-    max-height: 6.25rem;
-  }
-   */
-
   .nav-toggle {
     display: block;
   }
@@ -215,27 +289,56 @@ header {
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
-
-
 }
-@media (min-width: 576px) { 
-  .contenedor-herramientas{
+@media (min-width: 576px) {
+  .contenedor-herramientas {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(3, 1fr);
-   }
+  }
+  .section-form{
+    background-size: 13%;
+  }
+  .contenedor-redes a{
+    font-size: 3rem;
+   
+  }
+  
+}
 
- }
-
-@media (min-width: 768px) { 
-  .contenedor-herramientas{
+@media (min-width: 768px) {
+  .contenedor-herramientas {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
-   }
-   
+  }
+
+  
 }
 @media (min-width: 992px) {
   .cont-descripcion {
     width: 50%;
-  } 
+  }
   
+  /*Contacto*/
+
+  .section-form{
+  
+    background-position: right;
+    background-size: 28%;
+  }
+
+
+  .section-redes {
+    flex-direction: row;
+  }
+
+  .contenedor-parrafo {
+    width: 37rem;
+  }
+
+  .contenedor-form {
+    width:35.62rem;
+  }
+  .btn-regular {
+    width: 25%;
+  }
 }
