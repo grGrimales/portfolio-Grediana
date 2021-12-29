@@ -218,7 +218,34 @@ textarea {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  padding: 1rem;
+  position: relative;
+  display: block;
+  margin: 20px auto 0px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+
+.btn-regular:hover{
+  padding-right: 8px;
+ background-color: #f266b5;
+}
+
+.btn-regular:hover .fa-envelope{
+  visibility: visible;
+  position: absolute;
+  right: 25px;
+  opacity: 1;
+}
+
+.fa-envelope{
+  visibility: hidden;
+  position: absolute;
+  right: 30px;
+  top: 11px;
+  transition: all 0.5s;
+  opacity: 0;
 }
 .section-redes {
   display: flex;
@@ -262,7 +289,6 @@ textarea {
   transition: all 0.3s ease-in-out;
   transform: scale(1.2, 1.2);
 }
-
 .contenedor-enlaces a:hover{
   color: #f15bb5;
 }
@@ -347,7 +373,5 @@ textarea {
   .contenedor-form {
     width:35.62rem;
   }
-  .btn-regular {
-    width: 25%;
-  }
+ 
 }

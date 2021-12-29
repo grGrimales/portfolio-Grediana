@@ -62,7 +62,7 @@ export const Contacto = () => {
                 </div>
 
                 <button className="btn-regular" type="submit">
-                  Enviar
+                  Enviar <i class="far fa-envelope"></i>
                 </button>
               </div>
             </form>
@@ -77,18 +77,18 @@ export const Contacto = () => {
                   <li>
                     <a
                       href="https://www.linkedin.com/in/grediana-rojas/"
-                      target="_blank"
+                      target="_blank" aria-label="Abrir link página Linkendin de Grediana Rojas"
                     >
                       <i className="fab fa-linkedin"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/grGrimales" target="_blank">
+                    <a href="https://github.com/grGrimales" target="_blank" aria-label="Abrir link página github de Grediana Rojas">
                       <i className="fab fa-github"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/grGrimales" target="_blank">
+                    <a href="https://github.com/grGrimales" target="_blank" aria-label="Abrir link de whatsapp de Grediana Rojas">
                       <i className="fab fa-whatsapp"></i>
                     </a>
                   </li>
