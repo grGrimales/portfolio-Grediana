@@ -14,20 +14,20 @@ export const Header = () => {
         <nav className="nav">
           <ul className="nav-menu">
             <li className="nav-menu-item">
-             <NavLink to="/"  className={({ isActive }) => (isActive ? "active nav-menu-link nav-enlace-link" : "nav-menu-link nav-enlace-link")}>Home</NavLink>
+             <NavLink to="/"  className={({ isActive }) => `nav-menu-link nav-enlace-link ${ isActive ? "active" : ""}`}>Home</NavLink>
             </li>
 
             <li className="nav-menu-item">
-             <NavLink to="/portfolio"   className="nav-menu-link nav-enlace-link">Portfolio</NavLink>
+             <NavLink to="/portfolio"    className={({ isActive }) => `nav-menu-link nav-enlace-link ${ isActive ? "active" : ""}`}>Portfolio</NavLink>
         
 
             </li>
             <li className="nav-menu-item">
-             <NavLink to="/herramientas"   className="nav-menu-link nav-enlace-link">Herramientas</NavLink>
+             <NavLink to="/herramientas"    className={({ isActive }) => `nav-menu-link nav-enlace-link ${ isActive ? "active" : ""}`}>Herramientas</NavLink>
             </li>
 
             <li className="nav-menu-item">
-             <NavLink to="/contacto"   className="nav-menu-link nav-enlace-link">Contacto</NavLink>
+             <NavLink to="/contacto"   className={({ isActive }) => `nav-menu-link nav-enlace-link ${ isActive ? "active" : ""}`}>Contacto</NavLink>
 
     
             </li>

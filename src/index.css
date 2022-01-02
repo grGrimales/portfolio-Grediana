@@ -74,14 +74,16 @@ header {
 }
 
 .nav-menu-link:hover {
-  color: #f15bb5;
+  color: #f7a1d5;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
-  border-bottom: 1px solid #ffffff;
 }
+
 .active {
-  color: #f7a1d5;
+  color: #f15bb5;
+  border-bottom: 1px solid #ffffff;
   font-weight: bold;
+
 }
 
 /* TOGGLE */

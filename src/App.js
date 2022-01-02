@@ -1,12 +1,14 @@
+import { Provider } from "react-redux";
 
-import React from "react";
-import { Header } from "./components/ui/Header";
 import { AppRouter } from "./router/AppRouter";
+import { store } from "./stores/store";
 
 
 function App() {
   return (
-    <>
+    
+    <Provider store={store}>
+
     <AppRouter>
   <div className="contenedor-app">
 
@@ -15,8 +17,8 @@ function App() {
     </AppRouter>
 
       
+    </Provider>
        
-    </>
   );
 }
 

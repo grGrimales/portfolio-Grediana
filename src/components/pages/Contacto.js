@@ -43,7 +43,7 @@ export const Contacto = () => {
                 <div>
                   <label htmlFor="telefono">Telefóno</label>
                   <input
-                    type="number"
+                    type="text"
                     name="telefono"
                     id="telefono"
                     placeholder="Ingrese número de contacto"
