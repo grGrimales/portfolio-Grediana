@@ -37,19 +37,7 @@ export const AppRouter = () => {
         <Route path="herramientas" element={<Herramientas />} />
         <Route path="contacto" element={<Contacto />} />
         <Route path="login" element={<Login />} />
-        {/* <Route path="/*" element={ 
-                    <PublicRoute>
-                       <HomeRouter />
-                    </PublicRoute>
-                 } /> */}
-        {/* <Route
-         path="/*"
-          element={
-            <PublicRoute>
-              
-            </PublicRoute>
-          }
-        /> */}
+       
 
         <Route
           path="/*"
