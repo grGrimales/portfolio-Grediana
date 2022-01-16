@@ -62,7 +62,7 @@ export const Contacto = () => {
                 </div>
 
                 <button className="btn-regular" type="submit">
-                  Enviar <i class="far fa-envelope"></i>
+                  Enviar <i className="far fa-envelope"></i>
                 </button>
               </div>
             </form>

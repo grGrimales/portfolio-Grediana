@@ -17,7 +17,7 @@ export const Home = () => {
             </h1>
   
             <p>
-              Mi curiosidad me lleva a seguir profundizando los conocimientos
+              Miiiiii curiosidad me lleva a seguir profundizando los conocimientos
               adquiridos y a aprender nuevas herramientas en el sector de la
               tecnología. Autodidacta, disciplinada y responsable me gustan las
               exigencias profesionales, los nuevos retos y poder plasmar en

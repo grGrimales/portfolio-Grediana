@@ -18,6 +18,7 @@ export const fetchSinToken = (endpoint, data, method = "GET") => {
 
 export const fetchConToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
+ // console.log(url);
   const token = localStorage.getItem("token") || "";
   if (method === "GET") {
     return fetch(url, {
@@ -26,14 +27,20 @@ export const fetchConToken = (endpoint, data, method = "GET") => {
         "x-token": token,
       },
     });
-  } else {
-    return fetch(url, {
-      method,
-      headers: {
-        "Content-type": "application/json",
-        "x-token": token,
-      },
-      body: JSON.stringify(data),
-    });
+  } else { 
+
+    try {
+      return  fetch(url, {
+        method,
+        headers: {
+          "Content-type": "application/json",
+          "x-token": token,
+        },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+ 
   }
 };

@@ -14,18 +14,17 @@ import { Portfolio } from "../components/pages/Portfolio";
 import { Herramientas } from "../components/pages/Herramientas";
 import { Contacto } from "../components/pages/Contacto";
 import { Login } from "../components/dashboard/auth/Login";
+import { listProject } from "../action/dashboard";
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
   const { checking } = useSelector((state) => state.auth);
-
   useEffect(() => {
     dispatch(startChecking());
+  dispatch(listProject());
+
   }, [dispatch]);
 
-  if (checking) {
-    return <h5>Espere...</h5>;
-  }
 
   return (
     <BrowserRouter>
