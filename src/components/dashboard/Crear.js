@@ -1,55 +1,42 @@
-import React,  {useState} from 'react'
+import React, { useState } from "react";
 import { startCreatePage } from "../../action/dashboard";
 import { useForm } from "../../hooks/useForm";
 import { useDispatch } from "react-redux";
 
-
 export const Crear = () => {
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+  const [formLoginValues, handleInputChange] = useForm({
+    title: "recipe title",
+    img: "your url img",
+    tecnologias: "tecnologias",
+    description: "description",
+  });
 
-    const [formLoginValues, handleInputChange] = useForm({
-      title: "recipe title",
-      img: "your url img",
-      tecnologias: "tecnologias",
-      description: "description",
-    });
+  const [img, setSelectedImg] = useState();
 
-    const [img, setSelectedImg] = useState()
-  
-    const { title, tecnologias, description } = formLoginValues;
-    
-/*
-    const formData = new FormData();
-    console.log(formData)
-    */
+  const {
+    title,
+    tecnologias,
+    description,
+    linkServer,
+    linkGithub,
+  } = formLoginValues;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const labels = tecnologias.split("-");
+    console.log(linkServer)
+    console.log(linkGithub)
 
 
-    
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  //  const labels = tecnologias.split('-'); 
+    dispatch(startCreatePage({ img, title, labels, description, linkServer, linkGithub }));
+  };
 
-  /*
-  formData.append("img", img);
-  formData.append("title", title);
-  formData.append("labels", tecnologias.split('-'));
-  formData.append("description", description);
-  */
-
-  const labels =  tecnologias.split('-')
-
-     dispatch(
-
-       
-        startCreatePage({img, title, labels, description })
-      );
-    };
-  
-    return (
-        <>
-           <div className="container">
+  return (
+    <>
+      <div className="container">
         <div className="card mt-3">
           <div className="card-header text-center  ">Crea una Nueva Page</div>
         </div>
@@ -81,14 +68,8 @@ export const Crear = () => {
 
               <input
                 type="file"
-               // value={selectedImg}
                 onChange={(e) => setSelectedImg(e.target.files[0])}
-              >
-              
-
-              
-              </input>
-              
+              ></input>
             </div>
 
             <div className="mb-3">
@@ -102,6 +83,31 @@ export const Crear = () => {
                 onChange={handleInputChange}
               />
             </div>
+
+            <div className="mb-3">
+              <label className="form-label">Linkserver</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Ej. puedes ver en tiempo real..."
+                name="linkServer"
+                value={linkServer}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label className="form-label">LinkGihub</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Ej. puedes ver en tiempo real..."
+                name="linkGithub"
+                value={linkGithub}
+                onChange={handleInputChange}
+              />
+            </div>
+
             <div className="mb-3">
               <label className="form-label">Descripción</label>
               <input
@@ -123,7 +129,7 @@ export const Crear = () => {
             Agregar Project
           </button>
         </form>
-      </div> 
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};

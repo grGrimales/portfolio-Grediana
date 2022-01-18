@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }  from "react";
 import { useForm } from "../../hooks/useForm";
 import { useDispatch, useSelector } from "react-redux";
 import { startUpdateProject } from "../../action/dashboard";
@@ -8,25 +8,24 @@ export const Editar = () => {
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
+  const [img, setSelectedImg] = useState();
 
   const page = useSelector((state) => state.dashboard.pagesEditar);
 
   const [formValues, handleInputChange] = useForm(page);
-  const { title, img, labels, description, id } = formValues;
+  const { title, labels, description, id, linkServer , linkGithub} = formValues;
 
   const handdleUpdateProject = (e) => {
-
     e.preventDefault();
-    dispatch(startUpdateProject(title, img, labels, description, id));
+    dispatch(startUpdateProject({title, img, labels, description, id, linkServer , linkGithub}));
     navigate('/login');
-    
   };
 
   return (
     <>
       <div className="container">
         <div className="card mt-3">
-          <div className="card-header text-center  ">Crea una Nueva Page</div>
+          <div className="card-header text-center">Crea una Nueva Page</div>
         </div>
         <form className=" mt-3">
           <div className="row">
@@ -42,17 +41,13 @@ export const Editar = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="mb-3 ">
-                <label className="form-label">Imagen Url</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="htps:/img.com"
-                  name="img"
-                  value={img}
-                  onChange={handleInputChange}
-                />
-              </div>
+    
+
+              <input
+                type="file"
+                onChange={(e) => setSelectedImg(e.target.files[0])}
+              ></input>
+
             </div>
 
             <div className="mb-3">
@@ -66,6 +61,33 @@ export const Editar = () => {
                 onChange={handleInputChange}
               />
             </div>
+
+
+
+            <div className="mb-3">
+              <label className="form-label">Linkserver</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Ej. puedes ver en tiempo real..."
+                name="linkServer"
+                value={linkServer}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label className="form-label">LinkGihub</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Ej. puedes ver en tiempo real..."
+                name="linkGithub"
+                value={linkGithub}
+                onChange={handleInputChange}
+              />
+            </div>
+
             <div className="mb-3">
               <label className="form-label">Descripción</label>
               <input

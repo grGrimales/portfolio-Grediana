@@ -4,16 +4,29 @@ import { types } from "../type/types";
 import { fetchConToken, fetchSinToken } from "../helpers/fetch";
 const baseUrl = process.env.REACT_APP_API_URL;
 
-export const startCreatePage = ({ img, title, labels, description }) => {
+export const startCreatePage = ({
+  img,
+  title,
+  labels,
+  description,
+  linkServer,
+  linkGithub,
+}) => {
   return async (dispatch) => {
     //  const baseUrl = "https://portafolio-grediana.herokuapp.com/api";
     //  const baseUrl = "https://localhost:8080/api";
     try {
       const formData = new FormData();
       const token = localStorage.getItem("token") || "";
+     if(img) {
+
       formData.append("img", img);
+
+    }
       formData.append("title", title);
       formData.append("labels", labels);
+      formData.append("linkServer", linkServer);
+      formData.append("linkGithub", linkGithub);
       formData.append("description", description);
 
       const resp = await fetch(baseUrl + "/page/create", {
@@ -95,15 +108,42 @@ const getProjectEditAction = (project) => ({
   payload: project,
 });
 
-export const startUpdateProject = (title, img, labels, description, id) => {
+export const startUpdateProject = ({ title, img, labels, description, id, linkServer, linkGithub }) => {
   return async (dispatch) => {
+    const formData = new FormData();
+    const token = localStorage.getItem("token") || "";
+
+    if(img) formData.append("img", img);
+    formData.append("title", title);
+    formData.append("labels", labels);
+    formData.append("linkServer", linkServer);
+    formData.append("linkGithub", linkGithub);
+    formData.append("description", description);
+
+
+
+
+    console.log(id);
+
+    const resp = await fetch(baseUrl + `/page/${id}`, {
+      method: "PUT",
+      body: formData,
+      headers: {
+        "x-token": token,
+      },
+    });
+
+    const body = await resp.json();
+    console.log(body);
+
+    /*
     const resp = await fetchConToken(
       `page/${id}`,
       { title, img, labels, description },
       "PUT"
     );
     const body = await resp.json();
-
+*/
     if (resp.ok) {
       dispatch(listProject());
       Swal.fire("success", body.msg, "success");
