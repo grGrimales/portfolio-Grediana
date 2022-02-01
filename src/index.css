@@ -198,11 +198,21 @@ header {
   text-align: center;
   border-radius: 2px;
   transition: all 0.5s;
+} 
+
+.btn-project a{
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .btn-project:hover {
   padding-right: 50px;
   background-color: #f266b5;
+}
+.btn-project a:hover {
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .btn-project:hover .fa-external-link-alt {

@@ -13,11 +13,11 @@ export const Editar = () => {
   const page = useSelector((state) => state.dashboard.pagesEditar);
 
   const [formValues, handleInputChange] = useForm(page);
-  const { title, labels, description, id, linkServer , linkGithub} = formValues;
+  const { title, labels, description, id, linkServer , linkGithub, order} = formValues;
 
   const handdleUpdateProject = (e) => {
     e.preventDefault();
-    dispatch(startUpdateProject({title, img, labels, description, id, linkServer , linkGithub}));
+    dispatch(startUpdateProject({title, img, labels, description, id, linkServer , linkGithub, order}));
     navigate('/login');
   };
 
@@ -42,7 +42,17 @@ export const Editar = () => {
                 />
               </div>
     
-
+              <div className="mb-3 ">
+                <label className="form-label">order</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Ej. Arroz con pollo..."
+                  name="order"
+                  value={order}
+                  onChange={handleInputChange}
+                />
+              </div>
               <input
                 type="file"
                 onChange={(e) => setSelectedImg(e.target.files[0])}

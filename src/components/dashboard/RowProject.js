@@ -11,7 +11,7 @@ export const RowProject = (page) => {
 
   const navigate = useNavigate();
 
-const {id, title, img, description, labels } = page;
+const {id, title, img, description, labels, order } = page;
 
   const handdleDeleteProject = (id) => {
 
@@ -38,6 +38,7 @@ const {id, title, img, description, labels } = page;
 
            <td>{description}</td>
            <td>{labels}</td>
+           <td>{order}</td>
            
 
            <td>

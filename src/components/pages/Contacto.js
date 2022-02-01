@@ -1,7 +1,35 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useDispatch} from "react-redux";
+import { useForm } from "../../hooks/useForm";
+import { startContacto } from "../../action/contacto";
+
+
 
 export const Contacto = () => {
+
+
+  const dispatch = useDispatch();
+
+
+  const [formLoginValues, handleContactInputChange] = useForm({
+    name: "carlos",
+    phone: "935462416",
+    email: "carlos.guzman@gmail.com",
+    message: "mensaje de ejemplo...."
+  });
+
+
+  const {  name, phone, email, message  } = formLoginValues;
+  
+  const handleSubmit = (e) => {
+      e.preventDefault();
+
+      console.log("envio")
+      dispatch(startContacto( name, phone, email, message ));
+
+  };
+
+
   return (
     <>
       <main className="main-contacto">
@@ -19,49 +47,62 @@ export const Contacto = () => {
           </section>
 
           <section className="section-redes">
-            <form>
+            <form >
               <div className="contenedor-form">
                 <div>
-                  <label htmlFor="nombre">Nombre</label>
+                  <label htmlFor="name">Nombre</label>
                   <input
                     type="text"
-                    name="nombre"
-                    id="nombre"
+                    name="name"
+                    id="name"
+                    value={name}
                     placeholder="Ingrese su nombre"
+                    onChange={handleContactInputChange}
                   />
                 </div>
                 <div>
-                  <label htmlFor="correo">Correo</label>
+                  <label htmlFor="email">Correo</label>
                   <input
                     type="email"
-                    name="correo"
-                    id="correo"
+                    name="email"
+                    id="email"
+                    value={email}
                     placeholder="ej: lucia@learningenglish.com"
+                    onChange={handleContactInputChange}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="telefono">Telefóno</label>
+                  <label htmlFor="phone">Telefóno</label>
                   <input
                     type="text"
-                    name="telefono"
-                    id="telefono"
+                    name="phone"
+                    id="phone"
+                    value={phone}
                     placeholder="Ingrese número de contacto"
+                    onChange={handleContactInputChange}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="mensaje">Mensaje</label>
+                  <label htmlFor="message">Mensaje</label>
 
                   <textarea
-                    name="mensaje"
-                    id="mensaje"
+                    name="message"
+                    id="message"
                     rows="10"
                     cols="30"
+                    value={message}
+                    onChange={handleContactInputChange}
                   ></textarea>
                 </div>
 
-                <button className="btn-regular" type="submit">
+                <button 
+                type="submit"
+                className="btn-regular" 
+                onClick={handleSubmit}
+                   
+                   >
                   Enviar <i className="far fa-envelope"></i>
                 </button>
               </div>

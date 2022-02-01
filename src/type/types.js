@@ -10,12 +10,14 @@ export const types = {
 
     pageStartAddNew: "[  page] Start add new",
     pageAddNew: "[  page] Add new",
-    pageClearActiveEvent: "[recets] Clear active event",
     pageUpdated: "[  page] Dashboard  updated",
     pageUpdatedOk: "[  page] Dashboard  updated ok",
     pageDeleted: "[  page] Dashboard deleted",
     pageLoaded: "[  page] Dashboard loaded",
     pageList: "[  page] Dashboard list",
+
+
+    contact: "[ contact ] Contact",
   
     
   };

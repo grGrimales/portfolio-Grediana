@@ -33,6 +33,8 @@ export const Dashboard = () => {
 
                 <th>Description</th>
                 <th>Labels</th>
+                <th>order</th>
+
                 <th>Acciones</th>
               </tr>
             </thead>

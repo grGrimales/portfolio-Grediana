@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 export const Crear = () => {
   const dispatch = useDispatch();
 
-  const [formLoginValues, handleInputChange] = useForm({
+  const [formLoginValues, handleInputChange, reset] = useForm({
     title: "recipe title",
     img: "your url img",
     tecnologias: "tecnologias",
@@ -20,6 +20,7 @@ export const Crear = () => {
     tecnologias,
     description,
     linkServer,
+    order,
     linkGithub,
   } = formLoginValues;
 
@@ -27,11 +28,9 @@ export const Crear = () => {
     e.preventDefault();
 
     const labels = tecnologias.split("-");
-    console.log(linkServer)
-    console.log(linkGithub)
 
-
-    dispatch(startCreatePage({ img, title, labels, description, linkServer, linkGithub }));
+    dispatch(startCreatePage({ img, title, order, labels, description, linkServer, linkGithub }));
+    reset()
   };
 
   return (
@@ -51,6 +50,18 @@ export const Crear = () => {
                   placeholder="Ej. Arroz con pollo..."
                   name="title"
                   value={title}
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div className="mb-3 ">
+                <label className="form-label">order</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Ej. Arroz con pollo..."
+                  name="order"
+                  value={order}
                   onChange={handleInputChange}
                 />
               </div>

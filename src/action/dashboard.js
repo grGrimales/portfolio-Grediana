@@ -7,6 +7,7 @@ const baseUrl = process.env.REACT_APP_API_URL;
 export const startCreatePage = ({
   img,
   title,
+  order,
   labels,
   description,
   linkServer,
@@ -18,12 +19,12 @@ export const startCreatePage = ({
     try {
       const formData = new FormData();
       const token = localStorage.getItem("token") || "";
-     if(img) {
-
-      formData.append("img", img);
-
-    }
+      if (img) {
+        formData.append("img", img);
+      }
       formData.append("title", title);
+      formData.append("order", order);
+
       formData.append("labels", labels);
       formData.append("linkServer", linkServer);
       formData.append("linkGithub", linkGithub);
@@ -108,20 +109,27 @@ const getProjectEditAction = (project) => ({
   payload: project,
 });
 
-export const startUpdateProject = ({ title, img, labels, description, id, linkServer, linkGithub }) => {
+export const startUpdateProject = ({
+  title,
+  img,
+  labels,
+  description,
+  id,
+  linkServer,
+  linkGithub,
+  order,
+}) => {
   return async (dispatch) => {
     const formData = new FormData();
     const token = localStorage.getItem("token") || "";
 
-    if(img) formData.append("img", img);
+    if (img) formData.append("img", img);
     formData.append("title", title);
     formData.append("labels", labels);
     formData.append("linkServer", linkServer);
     formData.append("linkGithub", linkGithub);
     formData.append("description", description);
-
-
-
+    formData.append("order", order);
 
     console.log(id);
 
