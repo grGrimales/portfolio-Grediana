@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import logo from '../../images/responsive-2.png';
 import responsive3 from '../../images/responsive-3.png';
 import responsive4 from '../../images/responsive-4.png';
@@ -7,6 +9,7 @@ import responsive4 from '../../images/responsive-4.png';
 
 
 export const Home = () => {
+
     return (
         <>
         <main>

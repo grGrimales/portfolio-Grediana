@@ -75,7 +75,7 @@ export const listProject = () => {
   };
 };
 
-export const getListProject = (listadoProjects) => ({
+const getListProject = (listadoProjects) => ({
   type: types.pageList,
   payload: listadoProjects,
 });

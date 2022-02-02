@@ -4,11 +4,13 @@ import { dashboardReducer } from "../reducer/dashboardReducer";
 
 
 import thunk from "redux-thunk";
+import { contactoReducer } from "../reducer/contactoReducer";
 
 
 const reducers = combineReducers({
   auth: authReducer,
   dashboard: dashboardReducer,
+  contacto: contactoReducer
 });
 
 const composeEnhancers =

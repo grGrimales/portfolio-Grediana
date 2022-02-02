@@ -18,6 +18,8 @@ export const types = {
 
 
     contact: "[ contact ] Contact",
+    contactSetError: "[contact] Set Error",
+    contactRemoveError: "[contact] Remove Error",
   
     
   };

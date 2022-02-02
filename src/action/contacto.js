@@ -1,6 +1,7 @@
 
 import {  fetchSinToken } from "../helpers/fetch";
 import Swal from "sweetalert2";
+import { types } from "../type/types";
 
 export const startContacto = (name, phone, email, message) => {
   
@@ -9,12 +10,10 @@ export const startContacto = (name, phone, email, message) => {
       const resp = await fetchSinToken("contact", { name, phone, email, message }, "POST");
       const body = await resp.json();
 
-      console.log(body)
   
       if (body.ok) {
-        Swal.fire("Success", body.msg, "success");
+        Swal.fire("Envío exitoso", '¡Gracias por contactarme!', "success");
 
-  console.log(body.message);
       
       } else {
         Swal.fire("Error", body.msg, "error");
@@ -24,3 +23,15 @@ export const startContacto = (name, phone, email, message) => {
   };
 
 
+  export const setError = (err) => ({
+    type: types.contactSetError,
+    payload: err,
+
+  });
+  
+  export const removeError = () => ({
+    type: types.contactRemoveError,
+  });
+  
+
+  

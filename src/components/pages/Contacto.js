@@ -1,15 +1,20 @@
 import React from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 import { useForm } from "../../hooks/useForm";
-import { startContacto } from "../../action/contacto";
+import { removeError, setError, startContacto } from "../../action/contacto";
+
+import validator from "validator";
 
 
 
 export const Contacto = () => {
-
+ 
 
   const dispatch = useDispatch();
+  const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
+  const { alerta, err } = useSelector((state) => state.contacto);
 
   const [formLoginValues, handleContactInputChange] = useForm({
     name: "carlos",
@@ -24,11 +29,31 @@ export const Contacto = () => {
   const handleSubmit = (e) => {
       e.preventDefault();
 
-      console.log("envio")
-      dispatch(startContacto( name, phone, email, message ));
+      if (IsformValid()) {
+        dispatch(startContacto( name, phone, email, message ));
+        }
 
   };
 
+
+    const IsformValid = () => {
+        if (email.trim().length === 0 || name.trim().length === 0 || phone.trim().length === 0 ) {
+          dispatch(setError("Los campos son obligatorios"));
+          setTimeout(() => {
+            dispatch(removeError());
+          }, 5000);
+          return false;
+        }else if (!validator.isEmail(email)) {
+          dispatch(setError("El correo no es válido"));
+        setTimeout(() => {
+            dispatch(removeError());
+          }, 5000);
+          return false;
+        }
+        return true;
+       
+        
+      };
 
   return (
     <>
@@ -48,6 +73,7 @@ export const Contacto = () => {
 
           <section className="section-redes">
             <form >
+              {alerta && <div className="alert-error">{err}</div>}
               <div className="contenedor-form">
                 <div>
                   <label htmlFor="name">Nombre</label>
@@ -56,6 +82,7 @@ export const Contacto = () => {
                     name="name"
                     id="name"
                     value={name}
+                    required
                     placeholder="Ingrese su nombre"
                     onChange={handleContactInputChange}
                   />
@@ -66,6 +93,8 @@ export const Contacto = () => {
                     type="email"
                     name="email"
                     id="email"
+                    required
+
                     value={email}
                     placeholder="ej: lucia@learningenglish.com"
                     onChange={handleContactInputChange}
@@ -78,6 +107,7 @@ export const Contacto = () => {
                     type="text"
                     name="phone"
                     id="phone"
+                    required
                     value={phone}
                     placeholder="Ingrese número de contacto"
                     onChange={handleContactInputChange}
@@ -92,7 +122,6 @@ export const Contacto = () => {
                     id="message"
                     rows="10"
                     cols="30"
-                    value={message}
                     onChange={handleContactInputChange}
                   ></textarea>
                 </div>
