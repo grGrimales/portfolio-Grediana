@@ -1,35 +1,29 @@
-import React from 'react'
-
-
-import logo from '../../images/responsive-2.png';
-import responsive3 from '../../images/responsive-3.png';
-import responsive4 from '../../images/responsive-4.png';
-
-
-
+import React from "react";
 
 export const Home = () => {
+  return (
+    <>
+      <main className="main-home">
+       
+        <h1 className="title-home">¡Buen día soy Grediana Rojas!</h1>
+        <div className="contenedor-home animate__animated animate__fadeIn">
+              <h2> Desarrolladora Front-end</h2>
+        
+          
+            <div className="cont-descripcion">
+              <p>
+                Licenciada en Enfermería con mas de 5 años de experiencia en el
+                área. Actualmente estoy enfocada en el desarrollo Front-end
+                porque me encanta poder plasmar en tangibles pensamientos e
+                ideas gracias a lo versátil y dinámico que es este campo. Mi
+                curiosidad me lleva a seguir profundizando los conocimientos
+                adquiridos y a aprender nuevas herramientas en el sector de la
+                tecnología.
+              </p>
+            </div>
+        
 
-    return (
-        <>
-        <main>
-            <div className="contenedor-home">
-            <section className="cont-descripcion">
-            <h1>
-              ¡Buen día soy <span>Grediana Rojas!</span>
-            </h1>
-  
-            <p>
-              Miiiiii curiosidad me lleva a seguir profundizando los conocimientos
-              adquiridos y a aprender nuevas herramientas en el sector de la
-              tecnología. Autodidacta, disciplinada y responsable me gustan las
-              exigencias profesionales, los nuevos retos y poder plasmar en
-              tangibles pensamientos e ideas. Manejo tecnologías para el
-              desarrollo en front-end: HTML, Css, JavaScript, React, Angular,
-              otros.
-            </p>
-          </section>
-  
+          {/* 
           <div
             id="carouselHome"
             className="carousel slide"
@@ -52,7 +46,10 @@ export const Home = () => {
               data-bs-target="#carouselHome"
               data-bs-slide="prev"
             >
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
               <span className="visually-hidden">Previous</span>
             </button>
             <button
@@ -61,15 +58,15 @@ export const Home = () => {
               data-bs-target="#carouselHome"
               data-bs-slide="next"
             >
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
               <span className="visually-hidden">Next</span>
             </button>
-          </div>
-            </div>
-      
-        </main>
-
-     
-      </>
-    )
-}
+          </div> */}
+        </div>
+      </main>
+    </>
+  );
+};

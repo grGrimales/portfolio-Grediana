@@ -10,7 +10,7 @@ import { contactoReducer } from "../reducer/contactoReducer";
 const reducers = combineReducers({
   auth: authReducer,
   dashboard: dashboardReducer,
-  contacto: contactoReducer
+  contacto: contactoReducer,
 });
 
 const composeEnhancers =

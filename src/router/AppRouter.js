@@ -17,13 +17,15 @@ import { Login } from "../components/dashboard/auth/Login";
 import { listProject } from "../action/dashboard";
 
 export const AppRouter = () => {
-  const dispatch = useDispatch();
-  const { checking } = useSelector((state) => state.auth);
-  useEffect(() => {
-    dispatch(startChecking());
-  dispatch(listProject());
 
-  }, [dispatch]);
+
+  const {query} = useSelector((state) => state.contacto);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+     dispatch(listProject(query));
+
+  }, [dispatch, query]);
 
 
   return (

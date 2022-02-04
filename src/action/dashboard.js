@@ -65,9 +65,9 @@ export const addNewPage = (title, img, labels, description) => ({
   },
 });
 
-export const listProject = () => {
+export const listProject = (query = "") => {
   return async (dispatch) => {
-    const resp = await fetchSinToken("page");
+    const resp = await fetchSinToken(`page?query=${query}` );
     const body = await resp.json();
 
     let listadoProjects = body.pages;
@@ -144,14 +144,6 @@ export const startUpdateProject = ({
     const body = await resp.json();
     console.log(body);
 
-    /*
-    const resp = await fetchConToken(
-      `page/${id}`,
-      { title, img, labels, description },
-      "PUT"
-    );
-    const body = await resp.json();
-*/
     if (resp.ok) {
       dispatch(listProject());
       Swal.fire("success", body.msg, "success");
@@ -160,3 +152,9 @@ export const startUpdateProject = ({
     }
   };
 };
+
+
+export const setquery = (query) => ({
+  type: types.pageQuery,
+  payload: query,
+});

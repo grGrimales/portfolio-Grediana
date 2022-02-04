@@ -16,7 +16,7 @@ import responsive from "../../images/responsive.png";
 export const Herramientas = () => {
   return (
     <>
-      <section className="section-herramientas">
+      <section className="section-herramientas animate__animated animate__fadeIn">
         <h1 className="titulo">Mi caja de herramientas.</h1>
         <p>
           Las herramientas y tecnologías que utilizo para dar vida

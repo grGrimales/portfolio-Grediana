@@ -3,7 +3,8 @@ import { types } from "../type/types";
 
 const initialState = {
   alerta: null,
-  err: {}
+  err: {},
+  query: ''
 };
 
 export const contactoReducer = (state = initialState, action) => {
@@ -18,7 +19,12 @@ export const contactoReducer = (state = initialState, action) => {
         alerta: null,
      
       };
-
+      case types.pageQuery:
+        return {
+          ...state,
+          query: [action.payload],
+         
+        };
     default:
       return state;
   }

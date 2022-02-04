@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 
 
 
-import Table from "react-bootstrap/Table";
-import { RowProject } from "./RowProject";
+//import Table from "react-bootstrap/Table";
+//import { RowProject } from "./RowProject";
 
 
 
@@ -23,7 +23,7 @@ export const Dashboard = () => {
     <>
 
 
-    <div className="container-fluid mt-5">
+    {/* <div className="container-fluid mt-5">
           <Table responsive="sm" striped bordered hover variant="dark">
             <thead>
               <tr>
@@ -49,7 +49,7 @@ export const Dashboard = () => {
    
             </tbody>
           </Table>
-        </div>
+        </div> */}
     </>
     
 

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import Dropdown from "react-bootstrap/Dropdown";
+//import Dropdown from "react-bootstrap/Dropdown";
 
 import { Link, NavLink } from "react-router-dom";
 import { startLogout } from "../../action/auth";
@@ -71,7 +71,7 @@ export const Header = () => {
               </NavLink>
             </li>
 
-            {!!logged ? (
+            {/* {!!logged ? (
               <li className="nav-menu-item">
                 <Dropdown>
                   <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -88,25 +88,15 @@ export const Header = () => {
                     </Link>
                   </Dropdown.Menu>
                 </Dropdown>
-                {/* <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <Link className="dropdown-item" to="login/dashboard/crear">
-                    Agregar project
-                  </Link>
-                  <Link className="dropdown-item" to="login/dashboard/crear">
-                    Agregar project
-                  </Link>
-                  <Link className="dropdown-item" to="login/dashboard/crear">
-                    Agregar project
-                  </Link>
-                </ul> */}
+         
               </li>
-            ) : null}
+            ) : null} */}
           </ul>
-          {!!logged ? (
+          {/* {!!logged ? (
             <button className="btn-logout" type="submit" onClick={handleLogout}>
               Logout
             </button>
-          ) : null}
+          ) : null} */}
         </nav>
         <button
           onClick={navToggle}

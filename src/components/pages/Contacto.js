@@ -12,7 +12,6 @@ export const Contacto = () => {
  
 
   const dispatch = useDispatch();
-  const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
   const { alerta, err } = useSelector((state) => state.contacto);
 
@@ -38,7 +37,7 @@ export const Contacto = () => {
 
     const IsformValid = () => {
         if (email.trim().length === 0 || name.trim().length === 0 || phone.trim().length === 0 ) {
-          dispatch(setError("Los campos son obligatorios"));
+          dispatch(setError("Todos los campos son obligatorios"));
           setTimeout(() => {
             dispatch(removeError());
           }, 5000);
@@ -57,7 +56,7 @@ export const Contacto = () => {
 
   return (
     <>
-      <main className="main-contacto">
+      <main className="main-contacto animate__animated animate__fadeIn">
         <div className="contenedor-contacto">
           <section className="section-form">
             <h1 className="text-center">Contacto</h1>

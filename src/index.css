@@ -13,6 +13,10 @@ body {
 }
 
 /*Generales*/
+.contenedor-app{
+  padding: 90px 20px 0;
+
+}
 
 h1 {
   font-weight: bold;
@@ -27,6 +31,7 @@ h3 {
 
 .contenedor-app {
   max-width: 100%;
+ 
 }
 
 img {
@@ -40,7 +45,7 @@ img {
   text-align: center;
 }
 
-.alert-error{
+.alert-error {
   width: 70%;
   background-color: red;
   border-radius: 5px;
@@ -50,7 +55,6 @@ img {
   justify-content: center;
   padding: 5px;
   margin: 0 auto;
-
 }
 
 /*Header*/
@@ -116,6 +120,7 @@ header {
   margin-right: 1rem;
   opacity: 0.8;
 }
+
 .btn-logout:hover {
   opacity: 1;
 }
@@ -133,63 +138,110 @@ header {
 }
 
 /* Home */
+.main-home {
+  background-image: url(./images/Copia\ de\ Cruzada.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  height: 1000px;
+}
+
+.title-home {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.contenedor-home h2 {
+  color: #f15bb5;
+  font-weight: bold;
+  padding: 2rem;
+}
 
 .contenedor-home {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin: 1rem;
 }
 
 .cont-descripcion {
-  width: 90%;
-  margin: 5rem auto;
-  /* background-color: #ffc8dd; */
   box-shadow: 0 4px 8px 0 #ffc8dd;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.cont-descripcion h1 {
-  text-align: center;
-  padding-top: 1.5rem;
+.cont-descripcion:hover {
+  transform: scale(1.02, 1.02);
+  background-color: #ffc8dd;
 }
 
 .cont-descripcion p {
   text-align: justify;
   padding: 1rem;
   line-height: 2rem;
+  font-size: 1.3rem;
 }
+
 /**Portfolio*/
+
+.contenedor-search {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.contenedor-search label {
+  color: #f266b5;
+}
+
+.contenedor-search .input-search {
+  display: flex;
+  width: 100%;
+  background-image: url("./images/211817_search_strong_icon.png");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 30px;
+  padding-left: 35px;
+  height: 30px;
+  border-radius: 2rem;
+  border: 1px solid #f266b5;
+  margin-left: 1rem;
+  content: "";
+}
+
+.contenedor-search .input-search:focus {
+  border: 2px solid #f266b5;
+}
 
 .container-project {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem;
+
 }
 
 .project {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: 2rem; */
+ 
 }
 
 .project h2 {
   text-align: center;
 }
 
-.cont-project-img  {
+.cont-project-img {
   width: 100%;
   height: 100%;
-
 }
 .cont-project-description {
   padding: 1rem;
 
   box-shadow: 0 4px 8px 0 #ffc8dd;
-
-
 }
 
 .cont-project-description div {
@@ -211,9 +263,9 @@ header {
   text-align: center;
   border-radius: 2px;
   transition: all 0.5s;
-} 
+}
 
-.btn-project a{
+.btn-project a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
@@ -253,6 +305,8 @@ header {
 
 .section-herramientas {
   width: 100%;
+  height: 1000px;
+
 }
 .section-herramientas p {
   text-align: center;
@@ -324,10 +378,19 @@ textarea {
   padding: 0.75rem 1.25rem;
   margin: 0.5rem 0;
   font-size: 1rem;
+  font-weight: bold;
   border: none;
   border-bottom: 1px solid #f7a1d5;
   border-right: 1px solid #f7a1d5;
   outline: none;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-bottom: 2px solid #f266b5;
+  border-right: 2px solid #f266b5;
 }
 
 .btn-regular {
@@ -411,6 +474,7 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  
   header {
     height: 3.75rem;
   }
@@ -418,18 +482,24 @@ textarea {
   .nav-menu {
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-between;
     margin: 0;
+    padding: 20px 0;
     background-color: #212529;
     position: fixed;
     top: 3.75rem;
     width: 100%;
-    height: calc(100% - 3.75rem);
-    overflow-y: auto;
+    height: calc(40% - 3.75rem);
     left: 100%;
     transition: left 0.3s;
+    z-index: 1;
+    overflow-y: none;
   }
 
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+}
   .nav-toggle {
     display: block;
   }
@@ -441,7 +511,10 @@ textarea {
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
+
+ 
 }
+
 @media (min-width: 576px) {
   .contenedor-herramientas {
     grid-template-rows: repeat(4, 1fr);
@@ -456,6 +529,19 @@ textarea {
 }
 
 @media (min-width: 768px) {
+
+   /*Home*/
+
+   .main-home {
+   
+    background-size: unset;
+    
+}
+
+.contenedor-home {
+
+  margin-left: 5rem;
+}
   /*Herramientas*/
   .contenedor-herramientas {
     grid-template-rows: repeat(2, 1fr);
@@ -467,6 +553,10 @@ textarea {
 
   /*Portfolio*/
 
+  .contenedor-search .input-search {
+    width: 50%;
+  }
+
   .project {
     flex-direction: row;
     gap: 2rem;
@@ -477,18 +567,20 @@ textarea {
   .project:nth-child(even) {
     flex-direction: row-reverse;
   }
-  
-  .cont-project-description{
+
+  .cont-project-description {
     flex-basis: 70%;
   }
-
-
 }
 @media (min-width: 992px) {
+  /*Home*/
   .cont-descripcion {
-    width: 50%;
+    width: 40%;
   }
-
+  .main-home {
+    background-position: top right;
+    background-size: auto;
+  }
   /*Contacto*/
 
   .section-form {
@@ -509,21 +601,16 @@ textarea {
   }
   /*Portfolio*/
 
-
   .cont-project-description div {
     flex-direction: row;
     margin-right: 2rem;
   }
   .fa-external-link-alt {
-    
     top: 19px;
-    
   }
 }
-@media (min-width: 1300px) { 
+@media (min-width: 1300px) {
   .fa-external-link-alt {
-    
     top: 11px;
-    
   }
 }

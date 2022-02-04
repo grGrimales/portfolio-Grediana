@@ -15,6 +15,8 @@ export const types = {
     pageDeleted: "[  page] Dashboard deleted",
     pageLoaded: "[  page] Dashboard loaded",
     pageList: "[  page] Dashboard list",
+    pageQuery: "[  page] Page query ",
+
 
 
     contact: "[ contact ] Contact",
