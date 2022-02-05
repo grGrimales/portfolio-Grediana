@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio-Grediana/static/css/main.4e3127d3.css",
+    "main.js": "/portfolio-Grediana/static/js/main.43c74d25.js",
+    "static/media/Copia de Cruzada.png": "/portfolio-Grediana/static/media/Copia de Cruzada.1051a85961fb84e61b7c.png",
+    "static/media/responsive.png": "/portfolio-Grediana/static/media/responsive.76b4d9728fb1b9c5b6a5.png",
+    "static/media/react-.png": "/portfolio-Grediana/static/media/react-.31e0fd09573db919aa4c.png",
+    "static/media/firebase.png": "/portfolio-Grediana/static/media/firebase.b5ee681ee80f6e172e7e.png",
+    "static/media/Cruzada.png": "/portfolio-Grediana/static/media/Cruzada.9f6e71f912684dd83ad2.png",
+    "static/media/sass.png": "/portfolio-Grediana/static/media/sass.d627c228d65c6b37c27d.png",
+    "static/media/_github.png": "/portfolio-Grediana/static/media/_github.198822422c9dbfb4d04f.png",
+    "static/media/css.png": "/portfolio-Grediana/static/media/css.5cb593240bc3ecf3f123.png",
+    "static/media/HTML.png": "/portfolio-Grediana/static/media/HTML.1dac6e8a67b0d7eea277.png",
+    "static/media/command-line.png": "/portfolio-Grediana/static/media/command-line.61a6c46d6c8bd8c13f85.png",
+    "static/media/w3c.png": "/portfolio-Grediana/static/media/w3c.f898dcb5dabf895eacdf.png",
+    "static/media/git.png": "/portfolio-Grediana/static/media/git.0ab35c5b2123525ea5a7.png",
+    "static/media/js.png": "/portfolio-Grediana/static/media/js.2cb7979879b7b25ec92a.png",
+    "static/media/bootstrap-.png": "/portfolio-Grediana/static/media/bootstrap-.dfdb529985eb72d47711.png",
+    "index.html": "/portfolio-Grediana/index.html",
+    "main.4e3127d3.css.map": "/portfolio-Grediana/static/css/main.4e3127d3.css.map",
+    "main.43c74d25.js.map": "/portfolio-Grediana/static/js/main.43c74d25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e3127d3.css",
+    "static/js/main.43c74d25.js"
+  ]
+}
