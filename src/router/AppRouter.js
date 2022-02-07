@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Header } from "../components/ui/Header";

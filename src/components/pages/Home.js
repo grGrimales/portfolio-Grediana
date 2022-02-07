@@ -12,7 +12,7 @@ export const Home = () => {
           
             <div className="cont-descripcion">
               <p>
-                Licenciada en Enfermería con mas de 5 años de experiencia en el
+                Licenciada en Enfermería con  8 años de experiencia en el
                 área. Actualmente estoy enfocada en el desarrollo Front-end
                 porque me encanta poder plasmar en tangibles pensamientos e
                 ideas gracias a lo versátil y dinámico que es este campo. Mi

@@ -15,11 +15,11 @@ export const Contacto = () => {
 
   const { alerta, err } = useSelector((state) => state.contacto);
 
-  const [formLoginValues, handleContactInputChange] = useForm({
-    name: "carlos",
-    phone: "935462416",
-    email: "carlos.guzman@gmail.com",
-    message: "mensaje de ejemplo...."
+  const [formLoginValues, handleContactInputChange, reset] = useForm({
+    name: "",
+    phone: "",
+    email: "",
+    message: ""
   });
 
 
@@ -30,13 +30,14 @@ export const Contacto = () => {
 
       if (IsformValid()) {
         dispatch(startContacto( name, phone, email, message ));
+        reset();
         }
 
   };
 
 
     const IsformValid = () => {
-        if (email.trim().length === 0 || name.trim().length === 0 || phone.trim().length === 0 ) {
+        if (email.trim().length === 0 || name.trim().length === 0 || phone.trim().length === 0 || message.trim().length === 0  ) {
           dispatch(setError("Todos los campos son obligatorios"));
           setTimeout(() => {
             dispatch(removeError());
@@ -72,7 +73,7 @@ export const Contacto = () => {
 
           <section className="section-redes">
             <form >
-              {alerta && <div className="alert-error">{err}</div>}
+              {alerta && <div className="alert-error animate__animated animate__fadeIn">{err}</div>}
               <div className="contenedor-form">
                 <div>
                   <label htmlFor="name">Nombre</label>
@@ -119,6 +120,7 @@ export const Contacto = () => {
                   <textarea
                     name="message"
                     id="message"
+                    value={message}
                     rows="10"
                     cols="30"
                     onChange={handleContactInputChange}
@@ -157,7 +159,7 @@ export const Contacto = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/grGrimales" target="_blank" aria-label="Abrir link de whatsapp de Grediana Rojas">
+                    <a href="https://api.whatsapp.com/send?phone=51935462416" target="_blank" aria-label="Abrir link de whatsapp de Grediana Rojas">
                       <i className="fab fa-whatsapp"></i>
                     </a>
                   </li>

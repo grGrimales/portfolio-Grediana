@@ -27,7 +27,7 @@ export const ListarProject = (page) => {
                 href={linkGithub}
                 target="_blank"
               >
-               Ver Repositorio Github  <i class="fas fa-external-link-alt"></i>
+               Ver Repo Github  <i class="fas fa-external-link-alt"></i>
               </a>
 
               
