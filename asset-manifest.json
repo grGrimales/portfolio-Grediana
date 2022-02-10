@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-Grediana/static/css/main.116fc2c6.css",
+    "main.css": "/portfolio-Grediana/static/css/main.d8d0e8fc.css",
     "main.js": "/portfolio-Grediana/static/js/main.f85234d6.js",
     "static/media/Copia de Cruzada.png": "/portfolio-Grediana/static/media/Copia de Cruzada.1051a85961fb84e61b7c.png",
     "static/media/responsive.png": "/portfolio-Grediana/static/media/responsive.76b4d9728fb1b9c5b6a5.png",
@@ -17,11 +17,11 @@
     "static/media/js.png": "/portfolio-Grediana/static/media/js.2cb7979879b7b25ec92a.png",
     "static/media/bootstrap-.png": "/portfolio-Grediana/static/media/bootstrap-.dfdb529985eb72d47711.png",
     "index.html": "/portfolio-Grediana/index.html",
-    "main.116fc2c6.css.map": "/portfolio-Grediana/static/css/main.116fc2c6.css.map",
+    "main.d8d0e8fc.css.map": "/portfolio-Grediana/static/css/main.d8d0e8fc.css.map",
     "main.f85234d6.js.map": "/portfolio-Grediana/static/js/main.f85234d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.116fc2c6.css",
+    "static/css/main.d8d0e8fc.css",
     "static/js/main.f85234d6.js"
   ]
 }
