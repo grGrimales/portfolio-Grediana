@@ -4,24 +4,19 @@ export const Home = () => {
   return (
     <>
       <main className="main-home">
-       
-        <h1 className="title-home">¡Buen día soy Grediana Rojas!</h1>
+        <h1 className="title-home">¡Hola soy Grediana Rojas!</h1>
         <div className="contenedor-home animate__animated animate__fadeIn">
-              <h2> Desarrolladora Front-end</h2>
-        
-          
-            <div className="cont-descripcion">
-              <p>
-                Licenciada en Enfermería con  8 años de experiencia en el
-                área. Actualmente estoy enfocada en el desarrollo Front-end
-                porque me encanta poder plasmar en tangibles pensamientos e
-                ideas gracias a lo versátil y dinámico que es este campo. Mi
-                curiosidad me lleva a seguir profundizando los conocimientos
-                adquiridos y a aprender nuevas herramientas en el sector de la
-                tecnología.
-              </p>
-            </div>
-        
+          <h2> Desarrolladora Front-end</h2>
+
+          <div className="cont-descripcion">
+            <p>
+              Desarrolladora front-end me encanta poder plasmar en tangibles
+              pensamientos e ideas gracias a lo versátil y dinámico que es este
+              campo. Mi curiosidad me lleva a seguir profundizando los
+              conocimientos adquiridos y a aprender nuevas herramientas en el
+              sector de la tecnología.
+            </p>
+          </div>
 
           {/* 
           <div
