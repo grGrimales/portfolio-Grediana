@@ -10,11 +10,12 @@ export const Home = () => {
 
           <div className="cont-descripcion">
             <p>
-              Desarrolladora front-end me encanta poder plasmar en tangibles
-              pensamientos e ideas gracias a lo versátil y dinámico que es este
-              campo. Mi curiosidad me lleva a seguir profundizando los
-              conocimientos adquiridos y a aprender nuevas herramientas en el
-              sector de la tecnología.
+              Desarralladora Front-end con conocimientos en diversas tecnologías
+              relacionadas con el área tales como Html, CSS, SASS, Javascript,
+              React, Boostrap, Git, entre otras. Actualmente me encuentro
+              cursando la carrera de Desarrollo Front-end en coder house. Mi
+              objetivo laboral es crear proyectos innovadores que me permiten
+              seguir ampliando mis conocimientos.
             </p>
           </div>
 
